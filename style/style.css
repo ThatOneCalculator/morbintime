@@ -48,6 +48,8 @@ body {
 .guestbook-entry {
   transform: translateY(-30%);
   color: pink;
+  display: grid;
+  align-content: center;
 }
 
 .enter {
