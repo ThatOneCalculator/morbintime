@@ -28,8 +28,17 @@
             />
           </a>
           <br />
-          <a href="/" class="guestbook-label">guestbook</a>
+          <p onclick="iframe()" class="guestbook-label">guestbook</p>
         </div>
+        <div class="frame-containter">
+          <div id="iframeDisplay" class="frame"></div>
+        </div>
+        <script>
+          function iframe() {
+            document.getElementById("iframeDisplay").innerHTML =
+              '<iframe src="https://onomadek.123guestbook.com/" height="500" width="700"></iframe>';
+          }
+        </script>
       </div>
     </center>
   </body>
