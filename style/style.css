@@ -1,0 +1,59 @@
+/* comic-neue-700 - latin */
+@font-face {
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/comic-neue-v8-latin-700.woff2") format("woff2"),
+    url("../fonts/comic-neue-v8-latin-700.woff") format("woff");
+}
+
+* {
+  font-family: "Comic Neue", sans-serif;
+}
+
+.wrapper {
+  font-size: 3rem;
+  color: pink;
+  padding-top: 10%;
+  padding-left: 3%;
+}
+
+.guest-wrapper {
+  font-size: 4rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center; */
+}
+
+a {
+  color: pink;
+  text-decoration: none;
+}
+
+body {
+  background: url("../assets/bg.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+}
+
+.cat {
+  height: 20rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.guestbook-entry {
+  transform: translateY(-30%);
+  color: pink;
+}
+
+.enter {
+  height: 20rem;
+}
