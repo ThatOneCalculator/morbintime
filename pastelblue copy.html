@@ -92,6 +92,149 @@
       }
     </style>
   </head>
+  #container{
+    position:relative;
+    margin:0;
+    width:calc(363px - {select:border width}px);
+    {block:ifround}
+    border-radius:0 5px 5px 0;
+    {block:Pagination}
+    border-radius:0 5px 0 0;
+    {/block:Pagination}
+    {/block:ifround}
+    {block:if400pxposts}
+    width:calc(463px - {select:border width}px);
+    {block:ifround}
+    border-radius:5px 0 0 5px;
+    {block:Pagination}
+    border-radius:5px 0 0 0;
+    {/block:Pagination}
+    {/block:ifround}
+    {/block:if400pxposts}
+    height:580px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    background:{color:content};
+    background-image:url('{image:content}');
+    background-attachment:fixed;
+    box-sizing:content-box;
+    {block:iffullcontentbg}
+    background-size:cover;
+    {/block:iffullcontentbg}
+    {block:ifnotrightsidebar}
+    float:right;
+    {block:ifnotrightsidebar}
+    {block:ifrightsidebar}
+    float:left;
+    {block:ifrightsidebar}
+    }
+    .post{
+      margin:25px auto 25px;
+      width:300px;
+      {block:if400pxposts}
+      width:400px;
+      {/block:if400pxposts}
+      padding:5px;
+      background:{color:post bg};
+      background-image:url('{image:post bg}');
+      background-attachment:fixed;
+      border:{select:border width}px {select:post border} {color:post border};
+      -webkit-transition:.6s;
+      {block:ifround}
+      border-radius:5px;
+      {/block:ifround}
+      overflow:hidden;
+      {block:ifglow}
+      box-shadow:0 0 5px 1px {color:post glow};
+      {/block:ifglow}
+  }
+  
+  .post img{
+          max-width:300px;
+          {block:if400pxposts}
+          max-width:400px;
+          {/block:if400pxposts}
+          {block:ifround}
+          border-radius:10px;
+          {/block:ifround}
+          text-align:center;
+          -webkit-transition:.5s;
+  }
+  #hyperlink{
+    text-align:center;
+    width:300px;
+    {block:if400pxposts}
+    width:400px;
+    {/block:if400pxposts}
+    position:relative;
+    text-align:{select:footer align};
+    text-transform:uppercase;
+    margin:-1px 0 -10px;
+}
+
+.hyperlink img{
+    border-radius:0px;
+}
+
+#hyperlink:hover > .tags{
+    max-height:300px;
+    width:307px;
+    {block:if400pxposts}
+    width:407px;
+    {/block:if400pxposts}
+    -webkit-transition:.6s;
+    opacity:1;
+    text-transform:none;
+    text-align:left;
+    margin:0px;
+}
+
+.tags{
+    margin:0px;
+    max-height:0px;
+    -webkit-transition:.8s;
+    opacity:0;
+    text-transform:none;
+    width:310px;
+    {block:if400pxposts}
+    width:410px;
+    {/block:if400pxposts}
+    text-align:left;
+}
+.media{
+    text-align:center;
+    max-width:300px;
+    {block:if400pxposts}
+    max-width:400px;
+    {/block:if400pxposts}
+}
+
+.media img{
+    text-align:center;
+    max-width:300px;
+    {block:if400pxposts}
+    max-width:400px;
+    {/block:if400pxposts}
+}
+
+.title{
+text-align:center;
+font-weight:bold;
+font-size:1.5em;
+line-height:200%;
+margin:0 0 10px 0;
+}
+
+.quote{
+font-weight:bold;
+text-align:justify;
+font-size:1.4em;
+font-style:italic;
+letter-spacing:4px;
+margin:0 0 10px 0;
+}
+
+
   <body>
     <marquee>guestbook closed forever</marquee>
   </body>
